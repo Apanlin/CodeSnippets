@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>highlight</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>NSMutableAttributedString* newString = [[NSMutableAttributedString alloc] initWithString:str];
+    NSRegularExpression *regex = [[NSRegularExpression alloc]initWithPattern:[NSString stringWithFormat:@"%@",self.keyword] options:NSRegularExpressionCaseInsensitive error:nil];
+    
+    [regex enumerateMatchesInString:str options:NSMatchingReportProgress range:NSMakeRange(0, [str length]) usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
+        [newString addAttribute:(NSString*)NSForegroundColorAttributeName
+                          value:(id)[UIColor redColor]
+                          range:result.range];
+    }];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7138305C-6E37-4AD8-AFA3-CD7CA781BDFA</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>字符串高亮匹配</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
